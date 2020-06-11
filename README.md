@@ -3,7 +3,7 @@ an idiot trying to learn js and prob took a very hard project
 
 ## Author
 - Huwng
-- Katayoki
+- Katayoki (much thanks!)
 
 ## Changelog 
 - Update 0.0.4 - Katayoki: Create UI for start screen
