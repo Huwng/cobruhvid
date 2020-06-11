@@ -99,3 +99,83 @@ body {
     width: 100vw;
     height: 400px;
 }
+
+.body .start-screen {
+    width: 100vw;
+    height: 400px;
+}
+
+.body .start-screen .chart {
+    width: 300px;
+    height: 300px;
+}
+
+.body .start-screen .chart svg {
+    width: 220px;
+    height: 220px;
+}
+
+.body .start-screen .chart svg circle {
+    fill: none;
+    stroke: black;
+    stroke-width: 30px;
+    stroke-linecap: round;
+    transform: translate(5px, 5px);
+    stroke-dasharray: 502.65;
+}
+
+.body .start-screen .chart svg .c2 {
+    stroke: aqua;
+    stroke-dashoffset: calc(502 - (502 * 60) / 100);
+}
+
+.body .start-screen .chart svg .c3 {
+    stroke: red;
+    stroke-dashoffset: calc(502 - (502 * 30) / 100);
+
+}
+
+.body .start-screen .chart svg .c4 {
+    stroke: burlywood;
+    stroke-dashoffset: calc(502 - (502 * 20) / 100);
+}
+
+.body .start-screen .information {
+    width: 60%;
+    height: 300px;
+}
+
+.body .start-screen .information .charted-region {
+    width: 100%;
+    height: 100px;
+}
+
+.body .start-screen .information .charted-region .descript {
+    width: 90%;
+    height: 30px;
+}
+
+.body .start-screen .information .charted-region .descript .color-fg {
+    width: 20px;
+    height: 20px;
+}
+
+.body .start-screen .information .charted-region .descript .color-fg.fg-c2 {
+    background-color: aqua;
+}
+
+.body .start-screen .information .charted-region .descript .color-fg.fg-c3 {
+    background-color: red;
+}
+
+.body .start-screen .information .charted-region .descript .color-fg.fg-c4 {
+    background-color: burlywood;
+}
+
+.body .start-screen .information .charted-region .descript .name {
+    width: 60%;
+}
+
+.body .start-screen .information .charted-region .descript .percentage {
+    width: 30%;
+}
