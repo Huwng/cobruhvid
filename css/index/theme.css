@@ -1,0 +1,21 @@
+:root {
+    --body-bg: #dddddd;
+    --navi-bg-1: #ffa2a2;
+    --navi-bg-2: #758aff;
+}
+
+.f-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.f-vertical {
+    flex-direction: column;
+}
+
+.f-space-a {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}

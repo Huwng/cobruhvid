@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>COVID-19 is Simple!!!</title>
+    <link rel="stylesheet" href="css/index/theme.css">
+    <link rel="stylesheet" href="css/index/index.css">
+    <script src="script/template.js"></script>
+</head>
+<body>
+    <div class="navigation">
+        <div class="bg">
+            <img src="res/nav-bg.jpg" alt="">
+        </div>
+        <div class="container f-center">
+            <div class="title">
+                <div class="inner f-space-a f-vertical">
+                    <div class="big-logo">
+                        <strong>COVID-19 Finder</strong>
+                    </div>
+                    <div class="sub-logo">
+                        Careful for your health
+                    </div>
+                </div>
+            </div>
+            <div class="search">
+                <input type="text" id="inp-region" placeholder="Type here where U're from...">
+                <input type="submit" id="search-region" value="Search">
+            </div>
+        </div>
+    </div>
+    <div class="body">
+        <div class="start-screen f-space-a">
+            <div class="chart f-center">
+                <svg>
+                    <circle cx="100" cy="100" r="80" class="c1"></circle>
+                    <circle cx="100" cy="100" r="80" class="c2"></circle>
+                    <circle cx="100" cy="100" r="80" class="c3"></circle>
+                    <circle cx="100" cy="100" r="80" class="c4"></circle>
+                </svg>
+            </div>
+            <div class="information">
+                <div class="charted-region f-center f-vertical">
+                    <div class="descript at-c2 f-space-a">
+                        <div class="color-fg fg-c2"></div>
+                        <label class="name">America</label>
+                        <label class="percentage">60%</label>
+                    </div>
+                    <div class="descript at-c3 f-space-a">
+                        <div class="color-fg fg-c3"></div>
+                        <label class="name">America</label>
+                        <label class="percentage">30%</label>
+                    </div>
+                    <div class="descript at-c4 f-space-a">
+                        <div class="color-fg fg-c4"></div>
+                        <label class="name">America</label>
+                        <label class="percentage">20%</label>
+                    </div>
+                </div>
+                <hr>
+                <div class="hlobal-infor"></div>
+            </div>
+        </div>
+        <div class="region-selection">
+            <table id="region-table"></table>
+        </div>
+    </div>
+    <script src="script/index-control.js"></script>
+</body>
+</html>
