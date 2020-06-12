@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <link href="https://fonts.googleapis.com/css2?family=Sriracha&display=swap" rel="stylesheet">
     <title>COVID-19 is Simple!!!</title>
-    <link rel="stylesheet" href="css/index/theme.css">
+    <link rel="stylesheet" id="site-mode" href="css/index/dark-mode.css">
+    <link rel="stylesheet" href="css/index/format.css">
     <link rel="stylesheet" href="css/index/index.css">
     <script src="script/template.js"></script>
 </head>
@@ -102,14 +103,23 @@
                 </div>
             </div>
         </div>
-        <div class="footer">
-            <div class="footer-container f-end updateDate">
-                <pre>Stats updated up until: </pre>
-                <p id="footer-updateday"> Waiting...</p>
+        <div class="footer f-space-b">
+            <div class="personize f-space-a">
+                <div class="lamp dark" id="triggle-lamp">
+                    <div class="triggle f-center" id="triggle-button">
+                        <div align="center" class="inner-trigger" style="transform: translate(-0.5px, -1px);">✤</div>
+                    </div>
+                </div>
             </div>
-            <div class="footer-container f-end watching">
-                <pre>Watching country: </pre>
-                <p id="footer-watchingCountry">Waiting...</p>
+            <div class="cre">
+                <div class="footer-container f-end updateDate">
+                    <pre>Stats updated up until: </pre>
+                    <p id="footer-updateday"> Waiting...</p>
+                </div>
+                <div class="footer-container f-end watching">
+                    <pre>Watching country: </pre>
+                    <p id="footer-watchingCountry">Waiting...</p>
+                </div>
             </div>
         </div>
     </div>

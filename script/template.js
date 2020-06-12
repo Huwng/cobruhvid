@@ -49,7 +49,7 @@ function cRE(name, id, callback) {
  * @param {string} value 
  */
 function setStyle(element, property, value) {
-  _$(element)[`style`][`${property}`] = value
+  _$(element).style[`${property}`] = value
 }
 
 /**

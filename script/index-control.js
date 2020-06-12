@@ -3,6 +3,8 @@
     let inp_region = _$(`#inp-region`)
     let smt_region = _$(`#search-region`)
 
+    let tlamp = _$(`#triggle-lamp`)
+
     let sumary_aprox_data = fetch_JSON_API(`https://api.covid19api.com/summary`)
     let sumary_json_data = undefined
     sumary_aprox_data.then(ex => {
@@ -30,6 +32,20 @@
 
     _$(`#b-c-region`).addEventListener('click', function() {
         hidePopup(`#p-s-region`)
+    })
+
+    tlamp.addEventListener(`click`, function() {
+        if (tlamp.classList.contains(`dark`)) {
+            tlamp.classList.remove(`dark`)
+            _$(`#site-mode`).href = `css/index/light-mode.css`
+            _$(`#triggle-button`).style.transform = `translateX(32px)`
+        } else {
+            tlamp.classList.add(`dark`)
+            _$(`#site-mode`).href = `css/index/dark-mode.css`
+            _$(`#triggle-button`).style.transform = `translateX(0)`
+
+        }
+
     })
 
     //! Function ZONE
