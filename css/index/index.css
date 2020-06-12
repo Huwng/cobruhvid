@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     transition: 0;
-    user-select: none;
+    /* user-select: none; */
     font-family: Arial, Helvetica, sans-serif;
     transition: 300ms;
 }
@@ -65,7 +65,7 @@ body {
 }
 
 .navigation .container .search {
-    width: 400px;
+    width: 600px;
 }
 
 #inp-region {
@@ -83,7 +83,7 @@ body {
     background-color: #00ffff33;
 }
 
-#search-region {
+#search-region, #fetch-Global {
     width: 60px;
     height: 36px;
     padding: 3px;
@@ -92,7 +92,7 @@ body {
     background-color: #00ffff33;
 }
 
-#search-region:hover {
+#search-region:hover, #fetch-Global:hover {
     background-color: #00179c71;
 }
 
@@ -113,7 +113,7 @@ body {
 
 .body .start-screen {
     width: 100vw;
-    height: calc(100vh - 100px);
+    height: calc(100vh - 140px);
 }
 
 .body .start-screen.hidden {
@@ -196,6 +196,7 @@ body {
 
 .body .start-screen .information .charted-region .descript .percentage {
     width: 30%;
+    font-family: 'Sriracha', cursive;
 }
 
 .body .start-screen .global-infor {
@@ -211,6 +212,10 @@ body {
 .body .start-screen .global-infor .sum .inf {
     width: 100%;
     height: 60px;
+}
+
+.body .start-screen .global-infor .sum .inf label[id^="sum-inf-"]{
+    font-family: 'Sriracha', cursive;
 }
 
 .popup {
@@ -271,4 +276,16 @@ body {
 #region-tab-sl td:hover {
     transform: translateY(-2px);
     box-shadow: #00000033 2px 2px 2px, #00000033 -1px -1px 2px;
+}
+
+.footer {
+    width: 100vw;
+    height: 40px;
+    background: #00ff0033;
+}
+
+.footer .footer-container {
+    width: 100%;
+    height: 20px;
+    font-size: x-small;
 }

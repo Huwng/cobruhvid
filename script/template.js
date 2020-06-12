@@ -28,11 +28,13 @@ function $$(selector) {
  * Create a region element to append to region table
  * @param {string} name 
  * @param {string} id 
+ * @param {Function} callback
  */
-function cRE(name, id) {
+function cRE(name, id, callback) {
   let ttr = document.createElement(`td`)
   ttr.addEventListener(`click`, function () {
     hidePopup(`#p-s-region`)
+    callback(id)
   })
   ttr.classList.add(`f-center`)
   let tlab = document.createElement(`div`)
@@ -63,7 +65,7 @@ function incDAT(_fr, _to, inTime, setTO, param = '') {
   let interval = setInterval(function () {
     frVal += step
     if (frVal >= toVal) frVal = toVal
-    setTO.innerText = `${Math.round(frVal)}${param}`
+    setTO.innerText = `${Math.round(frVal).toLocaleString()}${param}`
     // console.log(frVal)
     if (frVal >= toVal) clearInterval(interval)
   }, 10)
