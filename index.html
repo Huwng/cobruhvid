@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>COVID-19 is Simple!!!</title>
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="css/index/index.css">
     <script src="script/template.js"></script>
 </head>
+
 <body>
     <div class="navigation">
         <div class="bg">
@@ -34,31 +36,68 @@
             <div class="chart f-center">
                 <svg>
                     <circle cx="100" cy="100" r="80" class="c1"></circle>
-                    <circle cx="100" cy="100" r="80" class="c2"></circle>
-                    <circle cx="100" cy="100" r="80" class="c3"></circle>
-                    <circle cx="100" cy="100" r="80" class="c4"></circle>
+                    <circle cx="100" cy="100" r="80" class="c2" id="chart-graph-cx1"></circle>
+                    <circle cx="100" cy="100" r="80" class="c3" id="chart-graph-cx2"></circle>
+                    <circle cx="100" cy="100" r="80" class="c4" id="chart-graph-cx3"></circle>
                 </svg>
             </div>
             <div class="information">
                 <div class="charted-region f-center f-vertical">
                     <div class="descript at-c2 f-space-a">
                         <div class="color-fg fg-c2"></div>
-                        <label class="name">America</label>
-                        <label class="percentage">60%</label>
+                        <label class="name" id="chart-nat-lab1">Nation</label>
+                        <label class="percentage" id="chart-ptr-cx1">0%</label>
                     </div>
                     <div class="descript at-c3 f-space-a">
                         <div class="color-fg fg-c3"></div>
-                        <label class="name">America</label>
-                        <label class="percentage">30%</label>
+                        <label class="name" id="chart-nat-lab2">Nation</label>
+                        <label class="percentage" id="chart-ptr-cx2">0%</label>
                     </div>
                     <div class="descript at-c4 f-space-a">
                         <div class="color-fg fg-c4"></div>
-                        <label class="name">America</label>
-                        <label class="percentage">20%</label>
+                        <label class="name" id="chart-nat-lab3">Nation</label>
+                        <label class="percentage" id="chart-ptr-cx3">0%</label>
                     </div>
                 </div>
                 <hr>
-                <div class="hlobal-infor"></div>
+                <div class="global-infor f-space-a">
+                    <div class="sum confirmed">
+                        <div class="inf f-space-a f-vertical total">
+                            <label>Total: </label>
+                            <label id="sum-inf-total">Waiting...</label>
+                        </div>
+                        <hr>
+                        <div class="inf f-space-a f-vertical new-confirmed">
+                            <label>New Confirmed: </label>
+                            <label id="sum-inf-ntotal">Waiting...</label>
+                        </div>
+                        <hr>
+                    </div>
+                    <div class="sum death">
+                        <div class="inf f-space-a f-vertical total-death">
+                            <label>Total death: </label>
+                            <label id="sum-inf-tdeath">Waiting...</label>
+                        </div>
+                        <hr>
+                        <div class="inf f-space-a f-vertical new-death">
+                            <label>New death: </label>
+                            <label id="sum-inf-ndeath">Waiting...</label>
+                        </div>
+                        <hr>
+                    </div>
+                    <div class="sum recovered">
+                        <div class="inf f-space-a f-vertical total-recovered">
+                            <label>Total recovered: </label>
+                            <label id="sum-inf-trecovered">Waiting...</label>
+                        </div>
+                        <hr>
+                        <div class="inf f-space-a f-vertical new-recovered">
+                            <label>New recovered: </label>
+                            <label id="sum-inf-nrecovered">Waiting...</label>
+                        </div>
+                        <hr>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="region-selection">
@@ -67,4 +106,5 @@
     </div>
     <script src="script/index-control.js"></script>
 </body>
+
 </html>

@@ -2,21 +2,10 @@
  * fetch data JSON of full path API
  * @param {string} url 
  */
-function fetch_JSON_API(url) {
+async function fetch_JSON_API(url) {
   let request = new Request(url)
-  fetch(request)
-    .then(response => {
-      if (response.status === 200)
-        return response.json()
-      else
-        throw new Error(`Something went wrong on api server!`)
-    })
-    .then(response => {
-      console.log(response)
-      // progress(response)
-    }).catch(error => {
-      console.error(error)
-    })
+  const data = await fetch(request)
+  return await data.json()
 }
 /**
  * return a matched element by QUERY
@@ -57,4 +46,31 @@ function cRE(name, id) {
  */
 function setStyle(element, property, value) {
   _$(element)[`style`][`${property}`] = value
+}
+
+/**
+ * increase data to append to element
+ * @param {number} _fr
+ * @param {number} _to 
+ * @param {number} inTime milliseconds
+ * @param {HTMLElement} setTO 
+ */
+function incDAT(_fr, _to, inTime, setTO) {
+  let step = (_to - _fr) / inTime * 10
+  let frVal = _fr, toVal = _to
+  let interval = setInterval(function() {
+    frVal += step
+    if (frVal >= toVal) frVal = toVal
+    setTO.innerText = Math.round(frVal)
+    // console.log(frVal)
+    if (frVal >= toVal) clearInterval(interval)
+  }, 10)
+}
+
+function showStart() {
+  _$(`.body .start-screen`).classList.remove(`hidden`)
+}
+
+function hideStart() {
+  _$(`.body .start-screen`).classList.add(`hidden`)
 }
