@@ -6,6 +6,7 @@ an idiot trying to learn js and prob took a very hard project (Now with the help
 - Katayoki (much thanks!)
 
 ## Changelog 
+- Update 0.1.5.1 - Huwng: Not really a big update, just changing the date to a nicer format
 - Update 0.1.5 - Katayoki: Update Search feature, Fix code, Update Some part of UI
 - Update 0.1.4 - Katayoki: Update popup when search for region
 - Update 0.1.4a - Huwng: Added "Date", Making country-specific things work. (Can only be found on "stablebackup" branch)
@@ -18,3 +19,5 @@ an idiot trying to learn js and prob took a very hard project (Now with the help
 - Project CoBruhVid use Covid-19 API to list and find data about specific nation
 
 ## About Us  
+- @Huwng_ on Twitter and @hardian.anoyp on Facebook
+- Discord: Huwng#9397.
