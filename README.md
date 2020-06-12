@@ -6,6 +6,7 @@ an idiot trying to learn js and prob took a very hard project (Now with the help
 - Katayoki (much thanks!)
 
 ## Changelog 
+- Update 0.1.6 - Katayoki: Update Dark mode feature trigglable
 - Update 0.1.5.1 - Huwng: Not really a big update, just changing the date to a nicer format (Also making update 0.1.4a irrelevant)
 - Update 0.1.5 - Katayoki: Update Search feature, Fix code, Update Some part of UI
 - Update 0.1.4 - Katayoki: Update popup when search for region

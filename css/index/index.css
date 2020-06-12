@@ -5,6 +5,7 @@
     /* user-select: none; */
     font-family: Arial, Helvetica, sans-serif;
     transition: 300ms;
+    color: var(--text-body-color)
 }
 
 body {
@@ -17,6 +18,7 @@ body {
 .navigation {
     width: 100%;
     height: 100px;
+    color: #000000 !important;
 }
 
 .navigation .bg {
@@ -45,6 +47,7 @@ body {
 .navigation .container .title {
     width: 100%;
     height: 100px;
+    color: #000000 !important;
 }
 
 .navigation .container .title .inner {
@@ -57,11 +60,18 @@ body {
     font-size: 30px;
     height: 100%;
     transform: translateY(20px);
+    color: #000000 !important;
 }
+
+.navigation .container .title .big-logo strong {
+    color: #000000 !important;
+}
+
 
 .navigation .container .title .sub-logo {
     height: 40%;
     transform: translateY(-20px);
+    color: #000000 !important;
 }
 
 .navigation .container .search {
@@ -133,7 +143,7 @@ body {
 
 .body .start-screen .chart svg circle {
     fill: none;
-    stroke: rgba(0, 0, 0, 0.308);
+    stroke: var(--graph-bg);
     stroke-width: 30px;
     stroke-linecap: round;
     transform: translate(5px, 5px);
@@ -244,7 +254,7 @@ body {
 
 .popup:hover .search-close {
     transform: translateX(-100%);
-    background: #ffffff;
+    background: var(--popup-bg);
 }
 
 .popup .search-close:hover {
@@ -256,7 +266,7 @@ body {
     width: 600px;
     height: 400px;
     box-shadow: #00000033 3px 3px 3px;
-    background: #ffffff;
+    background: var(--popup-bg);
     overflow-x: hidden;
     overflow-y: auto;
     z-index: 130;
@@ -271,6 +281,7 @@ body {
     height: 30px;
     margin-bottom: 5px;
     margin-top: 5px;
+    cursor: pointer;
 }
 
 #region-tab-sl td:hover {
@@ -288,4 +299,25 @@ body {
     width: 100%;
     height: 20px;
     font-size: x-small;
+}
+
+.footer .personize {
+    width: 100px;
+    height: 40px;
+}
+
+.footer .personize .lamp {
+    width: 50px;
+    height: 20px;
+    background-color: var(--body-bg);
+    border-radius: 20px;
+}
+
+.footer .personize .lamp .triggle {
+    width: 18px;
+    height: 18px;
+    border-radius: 20px;
+    background-color: var(--body-bg);
+    border: 1px solid #ff0000;
+    cursor: pointer;
 }
