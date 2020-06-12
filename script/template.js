@@ -63,7 +63,7 @@ function incDAT(_fr, _to, inTime, setTO) {
     if (frVal >= toVal) frVal = toVal
     setTO.innerText = Math.round(frVal)
     // console.log(frVal)
-    if (frVal >= toVal) clearInterval(interval)
+    if (frVal >= toVal) clearInterval(interval)    
   }, 10)
 }
 
