@@ -101,6 +101,16 @@ body {
     height: 400px;
 }
 
+.body .updateDate {
+    display: flex;
+    flex-flow: row nowrap;    
+}
+
+.body .watching {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
 .body .start-screen {
     width: 100vw;
     height: calc(100vh - 100px);
