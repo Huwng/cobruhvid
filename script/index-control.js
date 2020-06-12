@@ -50,7 +50,17 @@
 
     //! Function ZONE
     function fetchGlobal() {
-        _$("#footer-updateday").innerHTML = Date(sumary_json_data.Date)
+        var uptodate = new Date(sumary_json_data.Date)
+            var dd = uptodate.getDate();
+            var mm = uptodate.getMonth()+1;  
+            var yyyy = uptodate.getFullYear(); 
+            var h = uptodate.getHours();
+            var m = uptodate.getMinutes();
+            var s = uptodate.getSeconds();
+            if(dd<10){dd='0'+dd} if(mm<10){mm='0'+mm}
+            if(h<10){h='0'+h}if(m<10){m='0'+m}if(s<10){s='0'+s}
+            var uptodate = h+':'+m+':'+s+' '+dd+'/'+mm+'/'+yyyy;
+        _$("#footer-updateday").innerHTML = uptodate
         setChartGlobal()
         setSummary()
         highlightCard(1, false)
