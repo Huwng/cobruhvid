@@ -30,8 +30,10 @@ function $$(selector) {
  * @param {string} id 
  */
 function cRE(name, id) {
-  let ttr = document.createElement(`tr`)
-  ttr.addEventListener(`click`, function() {fetch_REGION(id)})
+  let ttr = document.createElement(`td`)
+  ttr.addEventListener(`click`, function () {
+    hidePopup(`#p-s-region`)
+  })
   ttr.classList.add(`f-center`)
   let tlab = document.createElement(`div`)
   tlab.innerText = name
@@ -55,13 +57,13 @@ function setStyle(element, property, value) {
  * @param {number} inTime milliseconds
  * @param {HTMLElement} setTO 
  */
-function incDAT(_fr, _to, inTime, setTO) {
+function incDAT(_fr, _to, inTime, setTO, param = '') {
   let step = (_to - _fr) / inTime * 10
   let frVal = _fr, toVal = _to
-  let interval = setInterval(function() {
+  let interval = setInterval(function () {
     frVal += step
     if (frVal >= toVal) frVal = toVal
-    setTO.innerText = Math.round(frVal)
+    setTO.innerText = `${Math.round(frVal)}${param}`
     // console.log(frVal)
     if (frVal >= toVal) clearInterval(interval)
   }, 10)
@@ -73,4 +75,32 @@ function showStart() {
 
 function hideStart() {
   _$(`.body .start-screen`).classList.add(`hidden`)
+}
+/**
+ * Find all Region contain text in template
+ * @param {string} template 
+ */
+function filterRegion(template) {
+  let tmp = ``, tux
+  for (let i in template) {
+    tux = `(${template[i]}|${(template[i].toUpperCase() == template[i]) ? template[i].toLowerCase() : template[i].toUpperCase()})`
+    tmp = `${tmp}${tux}.*`
+  }
+  let regex = new RegExp(tmp, `g`)
+  // console.log(regex)
+  return regex
+}
+
+async function fetch_REGION(id) {
+  fetch_JSON_API(`https://api.covid19api.com/country/${id}`).then(data => {
+
+  })
+}
+
+function showPopup(id) {
+  _$(id).classList.add(`show`)
+}
+
+function hidePopup(id) {
+  _$(id).classList.remove(`show`)
 }
