@@ -13,6 +13,7 @@
     let waitData = setInterval(function () {
         if (sumary_json_data != undefined) {
             // console.log(sumary_json_data[`Global`])
+            document.getElementById("updateday").innerHTML = Date(sumary_json_data.Date)
             setChart()
             setSummary()
             clearInterval(waitData)
@@ -39,7 +40,14 @@
         incDAT(0, sumary_json_data.Global.NewRecovered, 1000, _$(`#sum-inf-nrecovered`))
         incDAT(0, sumary_json_data.Global.TotalRecovered, 1000, _$(`#sum-inf-trecovered`))
     }
-
+    function regionalsetSummary() {
+        incDAT(0, sumary_json_data.Countries[i].TotalConfirmed, 1000, _$(`#sum-inf-total`))
+        incDAT(0, sumary_json_data.Countries[i].TotalDeaths, 1000, _$(`#sum-inf-tdeath`))
+        incDAT(0, sumary_json_data.Countries[i].NewDeaths, 1000, _$(`#sum-inf-ndeath`))
+        incDAT(0, sumary_json_data.Countries[i].NewConfirmed, 1000, _$(`#sum-inf-ntotal`))
+        incDAT(0, sumary_json_data.Countries[i].NewRecovered, 1000, _$(`#sum-inf-nrecovered`))
+        incDAT(0, sumary_json_data.Countries[i].TotalRecovered, 1000, _$(`#sum-inf-trecovered`))
+    }
     function setChart() {
         /**@type {Array<{"Country","CountryCode","Slug","NewConfirmed","TotalConfirmed","NewDeaths","TotalDeaths","NewRecovered","TotalRecovered","Date"}>} */
         let c_dat = sumary_json_data.Countries
@@ -72,3 +80,5 @@
     }
     //! Function ZONE
 }).call(this)
+
+
