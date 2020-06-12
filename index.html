@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css2?family=Sriracha&display=swap" rel="stylesheet">
     <title>COVID-19 is Simple!!!</title>
     <link rel="stylesheet" href="css/index/theme.css">
     <link rel="stylesheet" href="css/index/index.css">
@@ -26,14 +27,13 @@
                 </div>
             </div>
             <div class="search">
+                <input type="submit" id="fetch-Global" value="Global">
                 <input type="text" id="inp-region" placeholder="Type here where U're from...">
                 <input type="submit" id="search-region" value="Search">
             </div>
         </div>
     </div>
     <div class="body">
-        <div class="updateDate"> <pre>Stats updated up until: </pre> <p id="updateday"> Waiting...</p> </div>
-        <div class="watching"> <pre>Watching country: </pre> <p id="watchingCountry"> Global</p> </div>
         <div class="start-screen f-space-a">
             <div class="chart f-center">
                 <svg>
@@ -45,17 +45,17 @@
             </div>
             <div class="information">
                 <div class="charted-region f-center f-vertical">
-                    <div class="descript at-c2 f-space-a">
+                    <div class="descript at-c2 f-space-a" id="name-card1">
                         <div class="color-fg fg-c2"></div>
                         <label class="name" id="chart-nat-lab1">Nation</label>
                         <label class="percentage" id="chart-ptr-cx1">0%</label>
                     </div>
-                    <div class="descript at-c3 f-space-a">
+                    <div class="descript at-c3 f-space-a" id="name-card2">
                         <div class="color-fg fg-c3"></div>
                         <label class="name" id="chart-nat-lab2">Nation</label>
                         <label class="percentage" id="chart-ptr-cx2">0%</label>
                     </div>
-                    <div class="descript at-c4 f-space-a">
+                    <div class="descript at-c4 f-space-a" id="name-card3">
                         <div class="color-fg fg-c4"></div>
                         <label class="name" id="chart-nat-lab3">Nation</label>
                         <label class="percentage" id="chart-ptr-cx3">0%</label>
@@ -100,6 +100,16 @@
                         <hr>
                     </div>
                 </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="footer-container f-end updateDate">
+                <pre>Stats updated up until: </pre>
+                <p id="footer-updateday"> Waiting...</p>
+            </div>
+            <div class="footer-container f-end watching">
+                <pre>Watching country: </pre>
+                <p id="footer-watchingCountry">Waiting...</p>
             </div>
         </div>
     </div>
