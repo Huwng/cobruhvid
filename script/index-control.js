@@ -50,10 +50,12 @@
     })
 
     _$(`#fetch-Global`).addEventListener(`click`, function() {
-        fetchGlobal()
         hideDetails()
-        btn_MD.classList.remove(`hidden`)
-        btn_BCK.classList.add(`hidden`)
+        if (currViewID != -1) {
+            btn_MD.classList.remove(`hidden`)
+            btn_BCK.classList.add(`hidden`)
+        }
+        fetchGlobal()
     })
 
     smt_region.addEventListener(`click`, function () {

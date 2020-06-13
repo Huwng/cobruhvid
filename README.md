@@ -6,6 +6,7 @@ an idiot trying to learn js and prob took a very hard project (Now with the help
 - Katayoki (much thanks!)
 
 ## Changelog 
+- Update 0.2.0 - Katayoki: Update Electron (Require Local Electron installed as global) `$ npm install -g electron`
 - Update 0.1.9 & 0.2.0a: Huwng & Katayoki: Added "More Details". Final major update before Electron
 - Update 0.1.7 - Katayoki: Update Details pane, Fix code, Ready to pull Electron
 - Update 0.1.6 - Katayoki: Update Dark mode feature toggleable
