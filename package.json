@@ -1,0 +1,22 @@
+{
+  "name": "cobruhvid",
+  "version": "1.0.0",
+  "description": "Co_Bruh_Vid",
+  "main": "app.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Huwng/cobruhvid.git"
+  },
+  "author": "Huwng, Katayoki",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Huwng/cobruhvid/issues"
+  },
+  "homepage": "https://github.com/Huwng/cobruhvid#readme",
+  "dependencies": {
+    "electron": "^9.0.4"
+  }
+}
