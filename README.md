@@ -6,7 +6,7 @@ an idiot trying to learn js and prob took a very hard project (Now with the help
 - Katayoki (much thanks!)
 
 ## Alpha/Beta releases
-- v0.2.1a - Testing before initial release. Can be found [HERE](https://drive.google.com/drive/folders/1mGSN17X4zQ9gGFfq7KsACWBb6X5lR0-w?usp=sharing)
+- v0.2.1a - Testing before initial release. Can be found [HERE](https://drive.google.com/drive/folders/1mGSN17X4zQ9gGFfq7KsACWBb6X5lR0-w?usp=sharing) (patch 0.2.2 included)
 
 ## Changelog 
 - Patch 0.2.2 - Katayoki: **FIXED** | **BUG** Duplicate Interval loop 
