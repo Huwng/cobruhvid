@@ -5,6 +5,9 @@ an idiot trying to learn js and prob took a very hard project (Now with the help
 - Huwng
 - Katayoki (much thanks!)
 
+## Alpha/Beta releases
+- v0.2.1a - Testing before initial release. Can be found [HERE](https://drive.google.com/drive/folders/1mGSN17X4zQ9gGFfq7KsACWBb6X5lR0-w?usp=sharing)
+
 ## Changelog 
 - Patch 0.2.2 - Katayoki: **FIXED** | **BUG** Duplicate Interval loop 
 - Patch 0.2.1 - Huwng: Changing API so "More Details" graph will be accurate
