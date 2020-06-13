@@ -6,7 +6,7 @@ an idiot trying to learn js and prob took a very hard project (Now with the help
 - Katayoki (much thanks!)
 
 ## Changelog 
-- Update 0.2.1a - Katayoki: **FIXED** | **BUG** Duplicate Interval loop 
+- Patch 0.2.2 - Katayoki: **FIXED** | **BUG** Duplicate Interval loop 
 - Patch 0.2.1 - Huwng: Changing API so "More Details" graph will be accurate
 - Update 0.2.0 - Katayoki: Update Electron (Require Local Electron installed as global) `$ npm install -g electron`
 - Update 0.1.9 & 0.2.0a: Huwng & Katayoki: Added "More Details". Final major update before Electron
@@ -25,5 +25,6 @@ an idiot trying to learn js and prob took a very hard project (Now with the help
 - Project CoBruhVid use Covid-19 API to list and find data about specific nation
 
 ## About Us  
-- @Huwng_ on Twitter and @hardian.anoyp on Facebook
+- [Huwng](https://twitter.com/Huwng_) on Twitter
+- [Katayoki](https://facebook.com/hardian.anoyp) on Facebook
 - Discord: Huwng#9397.
