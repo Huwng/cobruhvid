@@ -1,6 +1,6 @@
 {
   "name": "cobruhvid",
-  "version": "1.0.0",
+  "version": "1.0.0 alpha release",
   "description": "Co_Bruh_Vid",
   "main": "app.js",
   "scripts": {
@@ -19,6 +19,7 @@
   "homepage": "https://github.com/Huwng/cobruhvid#readme",
   "dependencies": {},
   "devDependencies": {
-    "electron": "^9.0.4"
+    "electron": "^9.0.4",
+    "electron-squirrel-startup": "^1.0.0"
   }
 }
