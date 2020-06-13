@@ -13,7 +13,7 @@
     sumary_aprox_data.then(ex => {
         sumary_json_data = ex
     })
-
+    
     let waitData = setInterval(function () {
         if (sumary_json_data != undefined) {
             // console.log(sumary_json_data[`Global`])
@@ -39,6 +39,8 @@
         fetch_REGION(sumary_json_data.Countries[currViewID].Slug)
         btn_MD.classList.add(`hidden`)
         btn_BCK.classList.remove(`hidden`)
+//        console.log(fetch_REGION(sumary_json_data.Countries[currViewID].Slug).data)
+//        setDataForChart(tconf, [regional_api_data.date, regional_api_data.confirmed])
     })
 
     btn_BCK.addEventListener(`click`, function() {

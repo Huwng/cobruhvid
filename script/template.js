@@ -93,11 +93,29 @@ function filterRegion(template) {
   return regex
 }
 
-async function fetch_REGION(id) {
-  fetch_JSON_API(`https://api.covid19api.com/country/${id}`).then(data => {
-
-  })
-}
+ async function fetch_REGION(id) {
+   var tc = [], td = [], tr = [], nc =[], nd=[], nr = []
+   let regional_json_data = undefined
+   fetch_JSON_API(`https://api.covid19api.com/country/${id}`).then(data => {
+     regional_json_data = data
+     //console.log(regional_json_data)
+      for (i = regional_json_data.length-1; i>=regional_json_data.length-10; --i) {
+      tc.unshift({date:regional_json_data[i].Date , data:regional_json_data[i].Confirmed})
+      td.unshift({date:regional_json_data[i].Date , data:regional_json_data[i].Deaths})
+      tr.unshift({date:regional_json_data[i].Date , data:regional_json_data[i].Recovered})
+      nc.unshift({date:regional_json_data[i].Date, data:regional_json_data[i].Confirmed - regional_json_data[i-1].Confirmed})
+      nr.unshift({date:regional_json_data[i].Date, data:regional_json_data[i].Recovered - regional_json_data[i-1].Recovered})
+      nd.unshift({date:regional_json_data[i].Date, data:regional_json_data[i].Deaths - regional_json_data[i-1].Deaths})
+      }
+      console.log(tc)
+      setDataForChart("tconf",tc)
+      setDataForChart("nconf",nc)
+      setDataForChart("tdeath",td)
+      setDataForChart("ndeath",nd)
+      setDataForChart("treco",tr)
+      setDataForChart("nreco",nr)
+   })
+ }
 
 function showPopup(id) {
   _$(id).classList.add(`show`)
@@ -129,7 +147,11 @@ function setDataForChart(id, value) {
     if (value[i].data > maxVAL) maxVAL = value[i].data
   
   for (let i = 0; i < value.length; ++i) {
-    getEL_DATE(i).innerHTML = value[i].date
+    var day = new Date(value[i].date)
+    var dd = day.getDate();
+    var mm = day.getMonth()+1;  
+    day = dd+'/'+mm
+    getEL_DATE(i).innerHTML = day
     getEL_VAL(i).style.height = `0%`
     setTimeout(() => getEL_VAL(i).style.height = `${value[i].data * 100 / maxVAL}%`, 100)
     getEL_LAB(i).innerHTML = toFixedDigit(value[i].data)
