@@ -25,3 +25,26 @@
     align-items: center;
     justify-content: flex-end;
 }
+
+.f-start {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--scroll-bar-track);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--scroll-bar-thumb);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--scroll-bar-thumb-hover);
+}

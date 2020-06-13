@@ -2,8 +2,11 @@
     /**@type {HTMLInputElement} */
     let inp_region = _$(`#inp-region`)
     let smt_region = _$(`#search-region`)
-
     let tlamp = _$(`#triggle-lamp`)
+    let btn_MD = _$(`#btn-more-details`)
+    let btn_BCK = _$(`#btn-back-start`)
+    
+    let currViewID = -1, prevViewID = -1
 
     let sumary_aprox_data = fetch_JSON_API(`https://api.covid19api.com/summary`)
     let sumary_json_data = undefined
@@ -19,8 +22,36 @@
         }
     }, 100)
 
+    let process_wait_details = setInterval(function () {
+        if (currViewID != prevViewID) {
+            if (currViewID == -1) {
+                btn_MD.classList.add(`hidden`)
+            } else if (!btn_MD.classList.contains(`clicked`)) {
+                btn_MD.classList.remove(`hidden`)
+            }
+            prevViewID = currViewID
+        }
+    }, 100)
+
+    btn_MD.addEventListener(`click`, function() {
+        showDetails()
+        // console.log(sumary_json_data.Countries[currViewID].Slug)
+        fetch_REGION(sumary_json_data.Countries[currViewID].Slug)
+        btn_MD.classList.add(`hidden`)
+        btn_BCK.classList.remove(`hidden`)
+    })
+
+    btn_BCK.addEventListener(`click`, function() {
+        btn_MD.classList.remove(`hidden`)
+        btn_BCK.classList.add(`hidden`)
+        hideDetails()
+    })
+
     _$(`#fetch-Global`).addEventListener(`click`, function() {
         fetchGlobal()
+        hideDetails()
+        btn_MD.classList.remove(`hidden`)
+        btn_BCK.classList.add(`hidden`)
     })
 
     smt_region.addEventListener(`click`, function () {
@@ -28,6 +59,8 @@
         // console.log(data)
         refresh_Region_tab(data)
         showPopup(`#p-s-region`)
+        hideDetails()
+        btn_BCK.classList.add(`hidden`)
     })
 
     _$(`#b-c-region`).addEventListener('click', function() {
@@ -45,7 +78,6 @@
             _$(`#triggle-button`).style.transform = `translateX(0)`
 
         }
-
     })
 
     //! Function ZONE
@@ -66,6 +98,7 @@
         highlightCard(1, false)
         highlightCard(2, false)
         highlightCard(3, false)
+        currViewID = -1;
     }
     function setSummary() {
         incDAT(0, sumary_json_data.Global.TotalConfirmed, 1000, _$(`#sum-inf-total`))
@@ -131,6 +164,7 @@
                         regionalSetSummary(i)
                         highlightCard(0 - `-${i}` + 1, true)
                     }
+                    currViewID = i;
                 }))
             }
         }

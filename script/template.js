@@ -106,3 +106,55 @@ function showPopup(id) {
 function hidePopup(id) {
   _$(id).classList.remove(`show`)
 }
+
+/**
+ * set data to chart use specific id
+ * * id must be: 
+ *  * tconf: Total Confirmed
+ *  * nconf: New Confirmed
+ *  * tdeath: Total Death
+ *  * ndeath: New Death
+ *  * treco: Total Recovered
+ *  * nreco: New Recovered
+ * * value must be an array of Object {date, data}
+ * @param {string} id id of the chart 
+ * @param {Array<{date: string, data: number}>} value data to set
+ * 
+ * @returns {void} no return value
+ */
+function setDataForChart(id, value) {
+  let specific_chart = _$(`#ex-chart-${id}`).children[1].children
+  let maxVAL = 0
+  for (let i = 0; i < value.length; ++i) 
+    if (value[i].data > maxVAL) maxVAL = value[i].data
+  
+  for (let i = 0; i < value.length; ++i) {
+    getEL_DATE(i).innerHTML = value[i].date
+    getEL_VAL(i).style.height = `0%`
+    setTimeout(() => getEL_VAL(i).style.height = `${value[i].data * 100 / maxVAL}%`, 100)
+    getEL_LAB(i).innerHTML = toFixedDigit(value[i].data)
+  }
+
+  function toFixedDigit(number) {
+    if (number > 1e+6) return `${Math.floor(number / 1e+6)}.${Math.round(number % 1e+6 / 1e+5)}m`
+    if (number > 1e+3) return `${Math.floor(number / 1e+3)}.${Math.round(number % 1e+3 / 1e+2)}k`
+    return number
+  }
+  function getEL_LAB(index) {
+    return getEL_VAL(index).children[0]
+  }
+  function getEL_VAL(index) {
+    return specific_chart[index].children[0].children[0]
+  }
+  function getEL_DATE(index) {
+    return specific_chart[index].children[1].children[0]
+  }
+}
+
+function showDetails() {
+  _$(`#more-details-pane`).classList.remove(`hidden`)
+}
+
+function hideDetails() {
+  _$(`#more-details-pane`).classList.add(`hidden`)
+}
