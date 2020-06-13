@@ -13,6 +13,8 @@ body {
     height: auto;
     background: var(--body-bg);
     overflow-x: hidden;
+    min-width: 600px;
+    min-height: 500px;
 }
 
 .navigation {
@@ -106,6 +108,12 @@ body {
     background-color: #00179c71;
 }
 
+.body {
+    width: 100vw;
+    height:  calc(100vh - 140px);
+    overflow: hidden;
+}
+
 .region-selection {
     width: 100vw;
     height: 400px;
@@ -121,9 +129,10 @@ body {
     flex-flow: row nowrap;
 }
 
-.body .start-screen {
+.body .start-screen, .more-details-pane{
     width: 100vw;
     height: calc(100vh - 140px);
+    transition: 1s;
 }
 
 .body .start-screen.hidden {
@@ -307,6 +316,7 @@ body {
 }
 
 .footer .personize .lamp {
+    user-select: none;
     width: 50px;
     height: 20px;
     background-color: var(--body-bg);
@@ -320,4 +330,131 @@ body {
     background-color: var(--body-bg);
     border: 1px solid #ff0000;
     cursor: pointer;
+}
+
+.more-details-switch {
+    width: 200px;
+    height: 30px;
+    position: absolute;
+    top: calc(100vh - 100px);
+    left: calc(100vw - 300px);
+    cursor: pointer;
+    transition: 1s;
+    transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.more-details-switch.hidden {
+    transform: translateX(300px);
+}
+
+.more-details-switch .label {
+    position: relative;
+}
+
+.more-details-switch .arrow {
+    width: 20px;
+    height: 20px;
+    transform: rotate(-45deg);
+    border-bottom: solid var(--text-body-color);
+    border-right: solid var(--text-body-color);
+}
+
+.more-details-switch .arrow-1 {
+    animation: more-switch-arrow 1500ms 0ms ease-in-out infinite;
+}
+
+.more-details-switch .arrow-2 {
+    animation: more-switch-arrow 1500ms 100ms ease-in-out infinite;
+}
+
+.more-details-switch .arrow-3 {
+    animation: more-switch-arrow 1500ms 200ms ease-in-out infinite;
+}
+
+@keyframes more-switch-arrow {
+    0%, 100% {
+        opacity: 0;
+        transform: translateX(0) rotate(-45deg);
+    }
+    50% {
+        opacity: 1;
+        transform: translateX(10px) rotate(-45deg);
+    }
+}
+
+.more-details-pane {
+    background: var(--body-bg);
+    position: relative;
+    top:  calc(-100vh + 140px);
+}
+
+.more-details-pane.hidden {
+    transform: translateX(100%);
+}
+
+.more-details-pane .col {
+    width: 30%;
+    height: 90%;
+}
+
+.more-details-pane .col .row {
+    width: 95%;
+    height: 48%;
+    overflow: hidden;
+}
+
+.more-details-pane .col .row .col-chart {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px;
+    grid-template-rows: 100%;
+    grid-column-gap: 30px;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+.more-details-pane .col .row .col-chart .chart-element .el-tex {
+    width: 100%;
+    height: 100%;
+    border-bottom: var(--text-body-color) solid 1px;
+}
+
+.more-details-pane .col .row .col-chart .chart-element .el-date {
+    width: 100%;
+    height: 30px;
+}
+
+.more-details-pane .col .row .col-chart .chart-element .el-var {
+    width: 100%;
+    background-color: var(--graph-bg);
+}
+
+.more-details-pane .col .row .col-chart .chart-element .el-var:hover {
+    transform: translate(0px, -2px);
+}
+
+.more-details-pane .col .row .col-chart .chart-element .el-var label {
+    font-size: xx-small;
+}
+
+.back-to-start {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 100px;
+    left: calc(100vw - 60px);
+    cursor: pointer !important;
+}
+
+.back-to-start .ic-back {
+    transform: translate(3px, -2px);
+}
+
+.back-to-start label {
+    cursor: pointer !important;
+}
+
+.back-to-start.hidden {
+    transform: translateX(150px);
 }

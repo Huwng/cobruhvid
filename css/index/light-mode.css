@@ -3,4 +3,7 @@
     --text-body-color: #000000;
     --graph-bg: #00000066;
     --popup-bg: #aaaaaa;
+    --scroll-bar-track: #555555;
+    --scroll-bar-thumb: #ddddff;
+    --scroll-bar-thumb-hover: #fafafa;
 }
