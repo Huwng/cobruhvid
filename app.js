@@ -1,5 +1,5 @@
 const electron = require(`electron`)
-const {app, BrowserWindow} = electron
+const { app, BrowserWindow } = electron
 
 /**@type {Electron.BrowserWindow} */
 let window
