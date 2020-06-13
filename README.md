@@ -6,6 +6,7 @@ an idiot trying to learn js and prob took a very hard project (Now with the help
 - Katayoki (much thanks!)
 
 ## Changelog 
+- Update 0.2.1a - Katayoki: **FIXED** | **BUG** Duplicate Interval loop 
 - Patch 0.2.1 - Huwng: Changing API so "More Details" graph will be accurate
 - Update 0.2.0 - Katayoki: Update Electron (Require Local Electron installed as global) `$ npm install -g electron`
 - Update 0.1.9 & 0.2.0a: Huwng & Katayoki: Added "More Details". Final major update before Electron

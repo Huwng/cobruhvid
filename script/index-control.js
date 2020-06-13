@@ -165,7 +165,7 @@
                         highlightCard(3, true)
                     } else {
                         fetchGlobal()
-                        regionalSetSummary(i)
+                        setTimeout(function () {regionalSetSummary(i)}, 50)
                         highlightCard(0 - `-${i}` + 1, true)
                     }
                     currViewID = i;
