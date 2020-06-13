@@ -96,7 +96,7 @@ function filterRegion(template) {
  async function fetch_REGION(id) {
    var tc = [], td = [], tr = [], nc =[], nd=[], nr = []
    let regional_json_data = undefined
-   fetch_JSON_API(`https://api.covid19api.com/country/${id}`).then(data => {
+   fetch_JSON_API(`https://api.covid19api.com/total/country/${id}`).then(data => {
      regional_json_data = data
      //console.log(regional_json_data)
       for (i = regional_json_data.length-1; i>=regional_json_data.length-10; --i) {
